@@ -5,7 +5,6 @@
 # To run, use the function: divisorGen(<number>)    #
 # To print results, use: print divisorGen(<number>) #
 #####################################################
-
 from math import sqrt
 
 ##### Find all prime factors of n #####
@@ -43,20 +42,20 @@ def factorize(n):
 
 ##### Find all divisors using prime factors #####
 def divisors_from_factors(factors):
-   def unsorted_divisors_from_factors(factors):
+   def unsorted_divisors(factors):
       if not factors: return [1]
       else:
          base, max_power = factors[0]
-         if base == -1: return unsorted_divisors_from_factors(factors[1:])
+         if base == -1: return unsorted_divisors(factors[1:])
          elif base == 0: return []
-         elif base == 1: return unsorted_divisors_from_factors(factors[1:])
+         elif base == 1: return unsorted_divisors(factors[1:])
          else:
-            divisors = unsorted_divisors_from_factors(factors[1:])
+            divisors = unsorted_divisors(factors[1:])
             all_divisors = []
             for power in xrange(0, max_power+1):
                all_divisors += map(lambda x: x * base ** power, divisors)
             return all_divisors
-   all_divisors = unsorted_divisors_from_factors(factors)
+   all_divisors = unsorted_divisors(factors)
    all_divisors.sort()
    return all_divisors
 
@@ -64,26 +63,3 @@ def divisors_from_factors(factors):
 def divisorGen(n):
    d = divisors_from_factors(factorize(n))
    return d
-
-##### Find integers 0<n<1000 with largest number of divisors #####
-def part_b():
-   maxNumbers = []
-   maxDivisor = 0
-   for num in range(1,1000):
-      d = divisorGen(num)
-      if len(d)>maxDivisor:
-         maxDivisor = len(d)
-   for num in range(1,1000):
-      d = divisorGen(num)
-      if len(d) == maxDivisor:
-         maxNumbers += [num]
-   print maxNumbers
-
-##### Find integers 0<n<1000 with odd number of divisors #####
-def part_c():
-   oddDivisors = []
-   for num in range(1,1000):
-      d = divisorGen(num)
-      if len(d)%2!=0:
-         oddDivisors += [num]
-   print oddDivisors
