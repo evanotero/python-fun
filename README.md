@@ -2,7 +2,7 @@ python-fun
 =============
 This is a collection of Python files that have been used in class or were created for personal enjoyment.
 
-Some of these projects were written when I first started learning to program (i.e. TicTacToe).  However, the workarounds used, in these files, for situations where advanced concepts had not yet been introduced are interesting to read.
+Some of these projects were written when I first started learning to program (i.e. TicTacToe).  The workarounds used for situations where advanced concepts had not yet been introduced are interesting to read.
 
 Maze Solver
 ------------
