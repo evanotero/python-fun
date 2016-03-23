@@ -1,6 +1,4 @@
 #####################################################
-# Author: Evan Otero                                #
-# Date: November 24, 2015                           #
 # This script generates a list of divisors for n    #
 # To run, use the function: divisorGen(<number>)    #
 # To print results, use: print divisorGen(<number>) #
@@ -14,7 +12,7 @@ def factorize(n):
    elif n == 0: return [(0, 1)]
    elif n == 1: return [(1, 1)]
    else:
-      def potential_primes():
+      def find_primes():
          base_primes = (2, 3, 5)
          for base_prime in base_primes:
             yield base_prime
@@ -26,7 +24,7 @@ def factorize(n):
             prime_group += 30
       factors = []
       sqrtn = sqrt(n)
-      for divisor in potential_primes():
+      for divisor in find_primes():
          if divisor > sqrtn:
             break
          power = 0
@@ -41,7 +39,7 @@ def factorize(n):
       return factors
 
 ##### Find all divisors using prime factors #####
-def divisors_from_factors(factors):
+def factors_to_divisors(factors):
    def unsorted_divisors(factors):
       if not factors: return [1]
       else:
@@ -61,5 +59,5 @@ def divisors_from_factors(factors):
 
 ##### Main Function #####
 def divisorGen(n):
-   d = divisors_from_factors(factorize(n))
+   d = factors_to_divisors(factorize(n))
    return d
