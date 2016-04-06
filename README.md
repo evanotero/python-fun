@@ -16,7 +16,7 @@ The string will never end in a 0. Note that this implies that there will always 
 
 ####Output
 
-For each test case, output one line containing "Case #x: y", where x is the test case number (starting from 1) and y is the minimum number of friends you must invite.
+For each test case, output one line containing `Case #x: y`, where x is the test case number (starting from 1) and y is the minimum number of friends you must invite.
 
 [Full problem can be found here](https://code.google.com/codejam/contest/6224486/dashboard)
 
