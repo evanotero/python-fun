@@ -4,6 +4,22 @@ This is a collection of Python files that have been used in class or were create
 
 Some of these projects were written when I first started learning to program (i.e. TicTacToe).  The workarounds used for situations where advanced concepts had not yet been introduced are interesting to read.
 
+Standing Ovation
+----------------
+Everyone in the audience has a shyness level. An audience member with shyness level **S<sup>i</sup>** will wait until at least **S<sup>i</sup>** other audience members have already stood up to clap, and if so, she will immediately stand up and clap. If **S<sup>i</sup>** = 0, then the audience member will always stand up and clap immediately, regardless of what anyone else does.
+
+##Input
+
+The first line of the input gives the number of test cases, **T**. **T** test cases follow. Each consists of one line with **S<sup>max</sup>**, the maximum shyness level of the shyest person in the audience, followed by a string of **S<sup>max</sup> + 1** single digits. The **k**th digit of this string (counting starting from 0) represents how many people in the audience have shyness level **k**. For example, the string "409" would mean that there were four audience members with **S<sup>i</sup>** = 0 and nine audience members with **S<sup>i</sup>** = 2 (and none with **S<sup>i</sup>** = 1 or any other value). Note that there will initially always be between 0 and 9 people with each shyness level.
+
+The string will never end in a 0. Note that this implies that there will always be at least one person in the audience.
+
+##Output
+
+For each test case, output one line containing "Case #x: y", where x is the test case number (starting from 1) and y is the minimum number of friends you must invite.
+
+[Full problem can be found here](https://code.google.com/codejam/contest/6224486/dashboard)
+
 Maze Solver
 ------------
 Finds a path in a maze using recursive backtracking.  The format to represent a maze in a text file is
