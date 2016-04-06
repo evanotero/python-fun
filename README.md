@@ -6,15 +6,15 @@ Some of these projects were written when I first started learning to program (i.
 
 Standing Ovation
 ----------------
-Everyone in the audience has a shyness level. An audience member with shyness level **S<sup>i</sup>** will wait until at least **S<sup>i</sup>** other audience members have already stood up to clap, and if so, she will immediately stand up and clap. If **S<sup>i</sup>** = 0, then the audience member will always stand up and clap immediately, regardless of what anyone else does.
+Everyone in the audience has a shyness level. An audience member with shyness level **S<sub>i</sub>** will wait until at least **S<sub>i</sub>** other audience members have already stood up to clap, and if so, she will immediately stand up and clap. If **S<sub>i</sub>** = 0, then the audience member will always stand up and clap immediately, regardless of what anyone else does.
 
-##Input
+####Input
 
-The first line of the input gives the number of test cases, **T**. **T** test cases follow. Each consists of one line with **S<sup>max</sup>**, the maximum shyness level of the shyest person in the audience, followed by a string of **S<sup>max</sup> + 1** single digits. The **k**th digit of this string (counting starting from 0) represents how many people in the audience have shyness level **k**. For example, the string "409" would mean that there were four audience members with **S<sup>i</sup>** = 0 and nine audience members with **S<sup>i</sup>** = 2 (and none with **S<sup>i</sup>** = 1 or any other value). Note that there will initially always be between 0 and 9 people with each shyness level.
+The first line of the input gives the number of test cases, **T**. **T** test cases follow. Each consists of one line with **S<sub>max</sub>**, the maximum shyness level of the shyest person in the audience, followed by a string of **S<sub>max</sub> + 1** single digits. The **k**th digit of this string (counting starting from 0) represents how many people in the audience have shyness level **k**. For example, the string "409" would mean that there were four audience members with **S<sub>i</sub>** = 0 and nine audience members with **S<sub>i</sub>** = 2 (and none with **S<sub>i</sub>** = 1 or any other value). Note that there will initially always be between 0 and 9 people with each shyness level.
 
 The string will never end in a 0. Note that this implies that there will always be at least one person in the audience.
 
-##Output
+####Output
 
 For each test case, output one line containing "Case #x: y", where x is the test case number (starting from 1) and y is the minimum number of friends you must invite.
 
